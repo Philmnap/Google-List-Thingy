@@ -1,6 +1,13 @@
 const router = require("express").Router();
-const bookRoutes = require("./books");
+const booksControllers = require("../../controllers/booksControllers");
 
-router.use("/books", bookRoutes);
+
+router.route("/")
+    .get(booksControllers.findAll)
+    .post(booksControllers.create);
+
+
+router.route("/:id")
+    .delete(booksControllers.remove);
 
 module.exports = router;
