@@ -4,7 +4,7 @@ import Jumbotron from "../components/Jumbotron";
 import BookSearch from "../components/BookSearch";
 import BookResult from "../components/BookResult";
 import Nav from "../components/Nav";
-import API from "../utils/API";
+import API from "../utils/api";
 
 class Search extends Component {
     state = {
